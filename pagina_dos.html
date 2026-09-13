@@ -1,1 +1,196 @@
-<h1>Página Dos</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables - SB Admin</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #212529;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 20px;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 220px;
+            height: 100%;
+            background-color: #212529;
+            color: white;
+            padding: 20px;
+        }
+
+        .sidebar h4 {
+            color: #8a8d91;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #c7c8ca;
+            text-decoration: none;
+            padding: 12px 0;
+        }
+
+        .sidebar a:hover {
+            color: white;
+        }
+
+        .contenido {
+            margin-left: 220px;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo {
+            color: #6c757d;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .card-header {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .card-body {
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        Start Bootstrap
+    </div>
+
+    <div class="sidebar">
+
+        <h4>CORE</h4>
+        <a href="index.html">Dashboard</a>
+
+        <h4>INTERFACE</h4>
+        <a href="#">Layouts</a>
+        <a href="#">Pages</a>
+
+        <h4>ADDONS</h4>
+        <a href="#">Charts</a>
+        <a href="pagina_dos.html">Tables</a>
+
+    </div>
+
+    <main class="contenido">
+
+        <h1>Tables</h1>
+        <div class="subtitulo">Ejemplo de tabla</div>
+
+        <div class="card">
+
+            <div class="card-header">
+                DataTable Example
+            </div>
+
+            <div class="card-body">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Puesto</th>
+                            <th>Oficina</th>
+                            <th>Edad</th>
+                            <th>Fecha de inicio</th>
+                            <th>Salario</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Juan Pérez</td>
+                            <td>Desarrollador</td>
+                            <td>Villahermosa</td>
+                            <td>25</td>
+                            <td>2026</td>
+                            <td>$15,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>María López</td>
+                            <td>Diseñadora</td>
+                            <td>Tabasco</td>
+                            <td>24</td>
+                            <td>2025</td>
+                            <td>$14,000</td>
+                        </tr>
+
+                        <tr>
+                            <td>Carlos Hernández</td>
+                            <td>Programador</td>
+                            <td>Villahermosa</td>
+                            <td>27</td>
+                            <td>2024</td>
+                            <td>$18,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
