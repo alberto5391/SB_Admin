@@ -1,18 +1,255 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Proyecto</title>
-    </head>
-    <body>
-        <header>Mi Header</header>
-        <footer>Mi Footer</footer>
-    </body>
+<html lang="es">
 
-    <div class link>
-        <center><a href="pagina_uno.html"><h2>Pagina Uno</h2></a></center>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class link>
-        <center><a href="pagina_dos.html"><h2>Pagina Dos</h2></a></center>
-    </div>
+    <title>Panel principal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f6f9;
+            color: #222;
+        }
+
+        .barra-superior {
+            height: 60px;
+            background-color: #1f2937;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 25px;
+        }
+
+        .barra-superior h2 {
+            font-size: 20px;
+        }
+
+        .usuario {
+            font-size: 14px;
+            color: #d1d5db;
+        }
+
+        .menu-lateral {
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 230px;
+            height: calc(100vh - 60px);
+            background-color: #111827;
+            padding-top: 20px;
+        }
+
+        .menu-lateral h4 {
+            color: #6b7280;
+            font-size: 12px;
+            padding: 10px 20px;
+        }
+
+        .menu-lateral a {
+            display: block;
+            color: #d1d5db;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+
+        .menu-lateral a:hover {
+            background-color: #374151;
+            color: white;
+        }
+
+        .contenido {
+            margin-left: 230px;
+            padding: 30px;
+        }
+
+        .titulo {
+            margin-bottom: 5px;
+            font-size: 34px;
+        }
+
+        .descripcion {
+            color: #6b7280;
+            margin-bottom: 30px;
+        }
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tarjeta {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .tarjeta h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .numero {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .panel {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .panel h2 {
+            margin-bottom: 15px;
+        }
+
+        .panel p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+        }
+
+        .boton:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            margin-left: 230px;
+            margin-top: 30px;
+            padding: 20px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        @media (max-width: 800px) {
+            .tarjetas {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="barra-superior">
+
+        <h2>SB Admin - Proyecto</h2>
+
+        <div class="usuario">
+            Equipo de desarrollo
+        </div>
+
+    </header>
+
+    <aside class="menu-lateral">
+
+        <h4>MENÚ PRINCIPAL</h4>
+
+        <a href="index.html">
+            Dashboard
+        </a>
+
+        <h4>CONTENIDO</h4>
+
+        <a href="#">
+            Información
+        </a>
+
+        <a href="#">
+            Reportes
+        </a>
+
+        <h4>HERRAMIENTAS</h4>
+
+        <a href="pagina_uno.html">
+            Gráficas
+        </a>
+
+        <a href="pagina_dos.html">
+            Tables
+        </a>
+
+    </aside>
+
+    <main class="contenido">
+
+        <h1 class="titulo">Dashboard</h1>
+
+        <p class="descripcion">
+            Panel principal del proyecto.
+        </p>
+
+        <section class="tarjetas">
+
+            <div class="tarjeta">
+                <h3>Usuarios</h3>
+                <div class="numero">24</div>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Registros</h3>
+                <div class="numero">56</div>
+            </div>
+
+            <div class="tarjeta">
+                <h3>Reportes</h3>
+                <div class="numero">12</div>
+            </div>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Bienvenido</h2>
+
+            <p>
+                Este panel forma parte del proyecto desarrollado en equipo.
+                Desde el menú lateral se puede acceder a las diferentes
+                secciones del sistema.
+            </p>
+
+            <p>
+                La sección Tables contiene la tabla desarrollada por el
+                integrante encargado de la rama developer2.
+            </p>
+
+            <a href="pagina_dos.html" class="boton">
+                Ir a Tables
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Proyecto académico 2026 - Equipo de desarrollo
+    </footer>
+
+</body>
+
 </html>
